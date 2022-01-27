@@ -1,14 +1,17 @@
 {
   "expo": {
-    "name": "rn-post",
+    "name": "Test self notation",
     "slug": "rn-post",
+    "privacy": "public",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "sdkVersion": "44.0.0",
+    "platforms": ["ios", "android"],
+    "icon": "./assets/rn-icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/rn-splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#242832"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,16 +20,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.polinaopryshko.test-self-notation-app",
+      "buildNumber": "1.0.0"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+      "package": "com.polinaopryshko.test_self_notation_app",
+      "versionCode": 1,
+      "permissions": ["CAMERA", "WRITE_EXTERNAL_STORAGE"]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends.",
+          "cameraPermission": "The app accesses your camera to let you share them with your friends."
+        }
+      ]
+    ]
   }
 }
